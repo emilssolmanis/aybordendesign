@@ -1,6 +1,7 @@
 {{ $img := $.Page.Resources.GetMatch (.Get 0) }}
+{{ $img := $img.Resize "660x" }}
 
-<figure class="w-100 relative">
+<figure class="w-90">
     <img src="{{ $img.RelPermalink }}" alt="{{ .Get 1 }}" />
     <figcaption>{{ .Get 1 }}</figcaption>
 </figure>
