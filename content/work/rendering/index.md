@@ -3,6 +3,7 @@ title: "Rendering"
 date: 2020-03-31T16:21:12+01:00
 draft: true
 featured_image: /images/banners/rendering.jpg
+summary: renderenderenderender
 resources:
 - name: pic001
   src: images/001.jpg
