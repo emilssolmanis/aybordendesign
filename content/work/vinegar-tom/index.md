@@ -42,13 +42,13 @@ Choreography: Breton Tyner-Bryan
 
 PC: Matt Pillsner
 
-{{< img-wide "pic001" />}}
-{{< img-wide "pic002" />}}
-{{< img-wide "pic003" />}}
-{{< img-wide "pic004" />}}
-{{< img-wide "pic005" />}}
-{{< img-wide "pic006" />}}
-{{< img-wide "pic007" />}}
-{{< img-wide "pic008" />}}
-{{< img-wide "pic009" />}}
-{{< img-wide "pic010" />}}
+{{< img-wide resource="pic001" />}}
+{{< img-wide resource="pic002" />}}
+{{< img-wide resource="pic003" />}}
+{{< img-wide resource="pic004" />}}
+{{< img-wide resource="pic005" />}}
+{{< img-wide resource="pic006" />}}
+{{< img-wide resource="pic007" />}}
+{{< img-wide resource="pic008" />}}
+{{< img-wide resource="pic009" />}}
+{{< img-wide resource="pic010" />}}

@@ -1,13 +1,13 @@
-{{ $img := $.Page.Resources.GetMatch (.Get 0) }}
+{{ $img := $.Page.Resources.GetMatch (.Get "resource") }}
 {{ $img := $img.Fit "660x400 jpg" }}
 
-<figure class="w-100 ph2 mh0">
-    <img src="{{ $img.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get 1 }}" {{ end }} />
+<figure class="{{ if isset .Params "portrait"}}w-50{{ else }}w-100{{ end }} ph2 mh0">
+    <img src="{{ $img.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get "caption" }}" {{ end }} />
     <figcaption>
     {{ with .Inner }}
       {{.}}
     {{ else }}
-      {{ .Get 1 }}
+      {{ .Get "caption" }}
     {{ end }}
     </figcaption>
 </figure>

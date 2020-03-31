@@ -27,13 +27,15 @@ resources:
   src: images/010.jpg
 ---
 
-{{< img-wide "pic001" />}}
-{{< img-wide "pic002" />}}
-{{< img-wide "pic003" />}}
-{{< img-wide "pic004" />}}
-{{< img-wide "pic005" />}}
-{{< img-wide "pic006" />}}
-{{< img-wide "pic007" />}}
-{{< img-wide "pic008" />}}
-{{< img-wide "pic009" />}}
-{{< img-wide "pic010" />}}
+{{< images >}}
+{{< img-wide resource="pic001" portrait="true" />}}
+{{< img-wide resource="pic002" portrait="true" />}}
+{{< img-wide resource="pic003" portrait="true" />}}
+{{< img-wide resource="pic004" portrait="true" />}}
+{{< img-wide resource="pic005" />}}
+{{< img-wide resource="pic006" />}}
+{{< img-wide resource="pic007" />}}
+{{< img-wide resource="pic008" />}}
+{{< img-wide resource="pic009" />}}
+{{< img-wide resource="pic010" />}}
+{{< /images >}}

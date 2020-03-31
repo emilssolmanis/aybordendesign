@@ -35,11 +35,13 @@ Projection Design: Matthew Haber
 
 PC: T. Charles Erickson
 
-{{< img-wide "pic001" />}}
-{{< img-wide "pic002" />}}
-{{< img-wide "pic003" />}}
-{{< img-wide "pic004" />}}
-{{< img-wide "pic005" />}}
-{{< img-wide "pic006" />}}
-{{< img-wide "pic007" />}}
-{{< img-wide "pic008" />}}
+{{< images >}}
+{{< img-wide resource="pic003" portrait="true" />}}
+{{< img-wide resource="pic007" portrait="true" />}}
+{{< img-wide resource="pic001" />}}
+{{< img-wide resource="pic002" />}}
+{{< img-wide resource="pic004" />}}
+{{< img-wide resource="pic005" />}}
+{{< img-wide resource="pic006" />}}
+{{< img-wide resource="pic008" />}}
+{{< /images >}}

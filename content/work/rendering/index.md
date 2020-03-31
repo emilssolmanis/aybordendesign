@@ -30,71 +30,71 @@ resources:
 ---
 Replications and Conceptual Renderings
 
-{{< img-wide "pic001" >}}<h4>Charles E. Burchfield Replication</h4> 
+{{< img-wide resource="pic001" >}}<h4>Charles E. Burchfield Replication</h4> 
 <p>Rainy Night</p>
 <p>Watercolor on Board</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic002" >}}
+{{< img-wide resource="pic002" >}}
 <h4>Robert Edmond Jones Replication</h4>
 <p>Macbeth Rendering</p>
 <p>White Gouache on Black Board</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic003" >}}
+{{< img-wide resource="pic003" >}}
 <h4>Conceptual Digital Rendering</h4>
 <p>The Play That Goes Wrong</p>
 <p>Henry Lewis, Henry Shields, and Jonathan Sayer</p>
 <p>Photoshop</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic004" >}}
+{{< img-wide resource="pic004" >}}
 <h4>Conceptual Digital Rendering</h4>
 <p>Potluck Dinner Party Reunion</p>
 <p>Photoshop</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic005" >}}
+{{< img-wide resource="pic005" >}}
 <h4>Conceptual Model/Rendering</h4>
 <p>Henry V</p>
 <p>William Shakespeare</p>
 <p>Physical Model and Photoshop Enhancement</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic006" >}}
+{{< img-wide resource="pic006" >}}
 <h4>Conceptual Digital Rendering</h4>
 <p>I, Malvolio</p>
 <p>Tim Crouch</p>
 <p>Photoshop</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic007" >}}
+{{< img-wide resource="pic007" >}}
 <h4>John Lee Beatty Replication</h4>
 <p>Rebel Women</p>
 <p>Black Gouache on White Board</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic008" >}}
+{{< img-wide resource="pic008" >}}
 <h4>Conceptual Rendering</h4>
 <p>Trifles</p>
 <p>Susan Glaspell</p>
 <p>Watercolor on Board</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic009" >}}
+{{< img-wide resource="pic009" >}}
 <h4>Conceptual Rendering</h4>
 <p>Buried Child</p>
 <p>Sam Shepard</p>
 <p>Graphite on Tracing Paper</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic010" >}}
+{{< img-wide resource="pic010" >}}
 <h4>Conceptual Mixed Media Rendering</h4>
 <p>Haruki Murakami</p>
 <p>Black Gouache and Digital Media on Board</p>
 {{< /img-wide >}}
 
-{{< img-wide "pic011" >}}
+{{< img-wide resource="pic011" >}}
 <h4>CONCEPTUAL RENDERING</h4>
 <p>Peter Grimes</p>
 <p>Benjamin Britten</p>

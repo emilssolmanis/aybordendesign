@@ -32,14 +32,16 @@ Conceptual and Realized
 
 Models and Props
 
-{{< img-wide "pic001" "1/4\" Cottage" />}}
-{{< img-wide "pic002" "Tales of the Lost Formicans by Constance Congdon (Conceptual)" />}}
-{{< img-wide "pic003" "Trifles by Susan Glaspel (Conceptual)" />}}
-{{< img-wide "pic004" "Eurydice by Sarah Ruhl (Conceptual)" />}}
-{{< img-wide "pic005" "Stoop" />}}
-{{< img-wide "pic006" "Conceptual Garden Arch" />}}
-{{< img-wide "pic007" "Gazelle (Prop)" />}}
-{{< img-wide "pic008" "Wildebeest (Prop)" />}}
-{{< img-wide "pic009" "Lion King Jr. at Long Lake Camp for the Arts (Props/Paint)" />}}
-{{< img-wide "pic010" />}}
-{{< img-wide "pic011" />}}
+{{< images >}}
+{{< img-wide resource="pic001" caption="1/4\" Cottage" />}}
+{{< img-wide resource="pic002" caption="Tales of the Lost Formicans by Constance Congdon (Conceptual)" />}}
+{{< img-wide resource="pic003" caption="Trifles by Susan Glaspel (Conceptual)" />}}
+{{< img-wide resource="pic004" caption="Eurydice by Sarah Ruhl (Conceptual)" />}}
+{{< img-wide resource="pic006" caption="Conceptual Garden Arch" />}}
+{{< img-wide resource="pic007" caption="Gazelle (Prop)" portrait="true" />}}
+{{< img-wide resource="pic009" caption="Lion King Jr. at Long Lake Camp for the Arts (Props/Paint)" portrait="true" />}}
+{{< img-wide resource="pic008" caption="Wildebeest (Prop)" />}}
+{{< img-wide resource="pic010" />}}
+{{< img-wide resource="pic005" caption="Stoop" portrait="true" />}}
+{{< img-wide resource="pic011" portrait="true" />}}
+{{< /images >}}
