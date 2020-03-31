@@ -1,5 +1,5 @@
 {{ $img := $.Page.Resources.GetMatch (.Get 0) }}
-{{ $img := $img.Resize "660x" }}
+{{ $img := $img.Resize "660x jpg" }}
 
 <figure>
     <img src="{{ $img.RelPermalink }}" alt="{{ .Get 1 }}" />
