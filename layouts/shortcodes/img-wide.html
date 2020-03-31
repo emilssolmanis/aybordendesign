@@ -1,7 +1,15 @@
 {{ $img := $.Page.Resources.GetMatch (.Get 0) }}
 {{ $img := $img.Resize "660x" }}
 
+{{ if ne (len .Inner) 0 }}
+<figure class="w-90">
+    <img src="{{ $img.RelPermalink }}" />
+    <figcaption>{{ .Inner }}</figcaption>
+</figure>
+{{ else }}
 <figure class="w-90">
     <img src="{{ $img.RelPermalink }}" alt="{{ .Get 1 }}" />
     <figcaption>{{ .Get 1 }}</figcaption>
 </figure>
+{{ end }}
+
