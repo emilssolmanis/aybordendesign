@@ -17,8 +17,10 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
+  custom_css = ["css/fonts.css"]
   favicon = "images/new-logo-16.png"
-  body_classes = "avenir bg-near-white"
+  body_classes = "indie-flower bg-near-white"
+  post_content_classes = "indie-flower"
   description = ""
   facebook = ""
   twitter = ""
