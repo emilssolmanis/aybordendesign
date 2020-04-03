@@ -1,10 +1,11 @@
 ---
 title: "Fear and Misery In The Third Reich"
 date: 2020-03-31T15:40:15+01:00
-featured_image: /images/banners/fear-and-misery.jpg
 summary: very scare, much miser
 draft: false
 resources:
+- name: featured_image
+  src: images/banner.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002

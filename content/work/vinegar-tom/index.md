@@ -2,9 +2,10 @@
 title: "Vinegar Tom"
 date: 2020-03-30T09:23:43+01:00
 draft: false
-featured_image: /images/banners/vinegar-tom.jpg
 summary: "Play done as part of Mason Gross"
 resources:
+- name: featured_image
+  src: images/banner.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002
