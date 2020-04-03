@@ -2,7 +2,7 @@ title = "A. Y. Borden"
 baseURL = "https://modest-banach-8d0470.netlify.com/"
 languageCode = "en-us"
 theme = "ananke"
-timeout = "60s"
+timeout = "600s"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
