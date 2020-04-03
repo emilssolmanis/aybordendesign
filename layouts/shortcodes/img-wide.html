@@ -21,32 +21,32 @@
 {{ end }}
 
 <figure class="{{ if isset .Params "portrait"}}w-100 w-50-ns{{ else }}w-100{{ end }} ph2 mh0">
-    <picture>
+    <picture class="lazy">
         <source
             media="(max-width: 600px)"
-            srcset="{{ $i_0.RelPermalink }} 1x" >
+            data-srcset="{{ $i_0.RelPermalink }} 1x" >
 
         <source
             media="(min-width: 600px)"
-            srcset="{{ $i_1.RelPermalink }} 1x" >
+            data-srcset="{{ $i_1.RelPermalink }} 1x" >
 
         <source
             media="(min-width: 768px)"
-            srcset="{{ $i_2.RelPermalink }} 1x" >
+            data-srcset="{{ $i_2.RelPermalink }} 1x" >
 
         <source
             media="(min-width: 992px)"
-            srcset="{{ $i_3.RelPermalink }} 1x" >
+            data-srcset="{{ $i_3.RelPermalink }} 1x" >
 
         <source
             media="(min-width: 1200px)"
-            srcset="{{ $i_4.RelPermalink }} 1x" >
+            data-srcset="{{ $i_4.RelPermalink }} 1x" >
 
         <source
             media="(min-width: 1921px)"
-            srcset="{{ $img.RelPermalink }} 1x" >
+            data-srcset="{{ $img.RelPermalink }} 1x" >
 
-        <img src="{{ $i_2.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get "caption" }}" {{ end }} />
+        <img data-src="{{ $i_2.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get "caption" }}" {{ end }} />
     </picture>
     <figcaption>
     {{ with .Inner }}
