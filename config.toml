@@ -1,5 +1,4 @@
 title = "A. Y. Borden"
-baseURL = "https://modest-banach-8d0470.netlify.com/"
 languageCode = "en-us"
 theme = "ananke"
 timeout = "600s"
