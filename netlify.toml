@@ -1,4 +1,5 @@
 [build]
+timeout = "60000"
 publish = "public"
 command = "hugo --debug --gc --minify"
 
