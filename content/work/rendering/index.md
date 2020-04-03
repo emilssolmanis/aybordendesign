@@ -2,9 +2,10 @@
 title: "Rendering"
 date: 2020-03-31T16:21:12+01:00
 draft: false
-featured_image: /images/banners/rendering.jpg
 summary: renderenderenderender
 resources:
+- name: featured_image
+  src: images/banner.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002

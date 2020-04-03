@@ -2,9 +2,10 @@
 title: "Model Making"
 date: 2020-03-30T09:24:22+01:00
 draft: false
-featured_image: /images/banners/model-making.jpg
 summary: "Models, models, MOOOODEEEEELLS!!"
 resources:
+- name: featured_image
+  src: images/banner.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002

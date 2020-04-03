@@ -1,10 +1,11 @@
 ---
 title: "Scenic Painting"
 date: 2020-03-31T18:06:10+01:00
-featured_image: /images/banners/scenic-painting.jpg
 draft: false
 summary: stuff I painted
 resources:
+- name: featured_image
+  src: images/banner.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002
