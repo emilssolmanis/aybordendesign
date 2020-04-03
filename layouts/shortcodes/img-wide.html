@@ -1,8 +1,53 @@
 {{ $img := $.Page.Resources.GetMatch (.Get "resource") }}
-{{ $img := $img.Fit "660x400 jpg" }}
 
-<figure class="{{ if isset .Params "portrait"}}w-100 w-50-m w-50-l{{ else }}w-100{{ end }} ph2 mh0">
-    <img src="{{ $img.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get "caption" }}" {{ end }} />
+{{ $i_0 := "450x600 jpg" }}
+{{ $i_1 := "576x768 jpg" }}
+{{ $i_2 := "744x992 jpg" }}
+{{ $i_3 := "900x1200 jpg" }}
+{{ $i_4 := "1080x1920 jpg" }}
+
+{{ if isset .Params "portrait" }}
+  {{ $i_0 = $img.Fit "450x600 jpg" }}
+  {{ $i_1 = $img.Fit "576x768 jpg" }}
+  {{ $i_2 = $img.Fit "744x992 jpg" }}
+  {{ $i_3 = $img.Fit "900x1200 jpg" }}
+  {{ $i_4 = $img.Fit "1080x1920 jpg" }}
+{{ else }}
+  {{ $i_0 = $img.Fit "600x450 jpg" }}
+  {{ $i_1 = $img.Fit "768x576 jpg" }}
+  {{ $i_2 = $img.Fit "992x744 jpg" }}
+  {{ $i_3 = $img.Fit "1200x900 jpg" }}
+  {{ $i_4 = $img.Fit "1920x1080 jpg" }}
+{{ end }}
+
+<figure class="{{ if isset .Params "portrait"}}w-100 w-50-ns{{ else }}w-100{{ end }} ph2 mh0">
+    <picture>
+        <source
+            media="(max-width: 600px)"
+            srcset="{{ $i_0.RelPermalink }} 1x" >
+
+        <source
+            media="(min-width: 600px)"
+            srcset="{{ $i_1.RelPermalink }} 1x" >
+
+        <source
+            media="(min-width: 768px)"
+            srcset="{{ $i_2.RelPermalink }} 1x" >
+
+        <source
+            media="(min-width: 992px)"
+            srcset="{{ $i_3.RelPermalink }} 1x" >
+
+        <source
+            media="(min-width: 1200px)"
+            srcset="{{ $i_4.RelPermalink }} 1x" >
+
+        <source
+            media="(min-width: 1921px)"
+            srcset="{{ $img.RelPermalink }} 1x" >
+
+        <img src="{{ $i_2.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get "caption" }}" {{ end }} />
+    </picture>
     <figcaption>
     {{ with .Inner }}
       {{.}}
