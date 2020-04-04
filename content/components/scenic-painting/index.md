@@ -3,6 +3,7 @@ title: "Scenic Painting"
 date: 2020-03-31T18:06:10+01:00
 draft: false
 summary: stuff I painted
+order: 1
 resources:
 - name: featured_image
   src: images/banner.jpg

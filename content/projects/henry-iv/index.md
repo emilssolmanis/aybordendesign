@@ -3,6 +3,7 @@ title: "Henry IV Part I & II"
 date: 2020-03-31T14:48:38+01:00
 draft: false
 summary: an epic tale of henry and his mates going out for a pissup
+order: 2
 resources:
 - name: featured_image
   src: images/banner.jpg

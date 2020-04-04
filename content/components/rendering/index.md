@@ -3,6 +3,7 @@ title: "Rendering"
 date: 2020-03-31T16:21:12+01:00
 draft: false
 summary: renderenderenderender
+order: 2
 resources:
 - name: featured_image
   src: images/banner.jpg

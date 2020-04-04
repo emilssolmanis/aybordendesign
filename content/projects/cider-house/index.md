@@ -3,6 +3,7 @@ title: "Cider House Rules Part I & II"
 date: 2020-03-31T15:07:53+01:00
 draft: false
 summary: it's obviously a house made of cider
+order: 4
 resources:
 - name: featured_image
   src: images/banner.jpg
