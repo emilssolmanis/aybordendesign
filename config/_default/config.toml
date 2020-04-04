@@ -18,7 +18,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  custom_css = ["css/fonts.css"]
+  custom_css = ["css/fonts.css", "css/image-hovers.css"]
   favicon = "images/new-logo-16.png"
   body_classes = "amatic bg-near-white"
   post_content_classes = "amatic"
