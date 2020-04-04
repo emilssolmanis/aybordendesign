@@ -1,15 +1,16 @@
 {{ $section := where .context.Site.RegularPages "Section" .sectionName }}
 
 <div class="pa3 pa4-ns w-100 w-70-ns center">
-  {{ with .context.Site.GetPage "section" .sectionName }}
-    <h1 class="flex-none">
-      {{ .Title }}
-    </h1>
-  {{ end }}
+    <div class="flex flex-wrap">
+        {{ with .context.Site.GetPage "section" .sectionName }}
+        <h1 class="dib">
+            {{ .Title }}
+        </h1>
+        {{ end }}
 
-  <div class="flex flex-wrap">
-    {{ range $section }}
-        {{ partial "summary-with-image.html" . }}
-    {{ end }}
-  </div>
+
+        {{ range $section }}
+          {{ partial "summary-with-image.html" . }}
+        {{ end }}
+    </div>
 </div>
