@@ -1,17 +1,13 @@
 {{ $featured_image := .Page.Resources.GetMatch "featured_image" }}
 
-<div class="dib w-25 ma2">
+<div class="dib w-100 w-third-ns ma2">
     <a href="{{.Permalink}}">
         <picture class="db w-100 relative hover-container">
             <img
                 src="{{ $featured_image.RelPermalink }}" 
                 alt="image from {{ .Title }}">
-            <div class="overlay">
-                <h2 class="di overlay-text">
-                    {{ .Title }}
-                </h2>
-            </div>
-
+            <div class="overlay"></div>
+            <div class="overlay-text"> {{ .Title }} </div>
         </picture>
     </a>
 </div>
