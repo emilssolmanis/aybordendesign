@@ -1,15 +1,22 @@
 {{ $section := where .context.Site.RegularPages "Section" .sectionName }}
+{{ $sortedSections := sort $section ".Params.order" }} 
 
 <div class="pa3 pa4-ns w-100 w-70-ns center">
     <div class="flex items-center">
-        <div class="flex flex-column">
+        <div class="flex flex-column w-100 w-50-ns">
             {{ with .context.Site.GetPage "section" .sectionName }}
             <h1 class="dib">
                 {{ .Title }}
             </h1>
             {{ end }}
 
-            {{ range sort $section ".Params.order" }}
+            {{ range first 1 $sortedSections }}
+                {{ partial "summary-with-image.html" . }}
+            {{ end }}
+        </div>
+
+        <div class="flex flex-column w-100 w-50-ns">
+            {{ range first 3 (after 1 $sortedSections) }}
                 {{ partial "summary-with-image.html" . }}
             {{ end }}
         </div>
