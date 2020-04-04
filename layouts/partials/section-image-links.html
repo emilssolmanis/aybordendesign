@@ -2,21 +2,21 @@
 {{ $sortedSections := sort $section ".Params.order" }} 
 
 <div id="{{ .sectionName }}" class="pa3 pa4-ns w-100 w-70-ns center">
-    <div class="flex items-center">
-        <div class="flex flex-column w-100 w-50-ns">
+    <div class="flex-ns">
+        <div class="flex-ns flex-column-ns w-100 w-50-ns">
             {{ with .context.Site.GetPage "section" .sectionName }}
-            <h1 class="dib">
+            <h1 class="dib self-start">
                 {{ .Title }}
             </h1>
             {{ end }}
 
-            {{ range first 1 $sortedSections }}
+            {{ range first 2 $sortedSections }}
                 {{ partial "summary-with-image.html" . }}
             {{ end }}
         </div>
 
-        <div class="flex flex-column w-100 w-50-ns">
-            {{ range first 3 (after 1 $sortedSections) }}
+        <div class="flex-ns flex-column-ns w-100 w-50-ns">
+            {{ range first 3 (after 2 $sortedSections) }}
                 {{ partial "summary-with-image.html" . }}
             {{ end }}
         </div>

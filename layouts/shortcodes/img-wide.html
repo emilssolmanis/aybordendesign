@@ -1,20 +1,17 @@
 {{ $img := $.Page.Resources.GetMatch (.Get "resource") }}
 
 {{ $i_0 := "450x600 jpg" }}
-{{ $i_1 := "576x768 jpg" }}
 {{ $i_2 := "744x992 jpg" }}
 {{ $i_3 := "900x1200 jpg" }}
 {{ $i_4 := "1080x1920 jpg" }}
 
 {{ if isset .Params "portrait" }}
   {{ $i_0 = $img.Fit "450x600 jpg" }}
-  {{ $i_1 = $img.Fit "576x768 jpg" }}
   {{ $i_2 = $img.Fit "744x992 jpg" }}
   {{ $i_3 = $img.Fit "900x1200 jpg" }}
   {{ $i_4 = $img.Fit "1080x1920 jpg" }}
 {{ else }}
   {{ $i_0 = $img.Fit "600x450 jpg" }}
-  {{ $i_1 = $img.Fit "768x576 jpg" }}
   {{ $i_2 = $img.Fit "992x744 jpg" }}
   {{ $i_3 = $img.Fit "1200x900 jpg" }}
   {{ $i_4 = $img.Fit "1920x1080 jpg" }}
@@ -28,10 +25,6 @@
 
         <source
             media="(min-width: 600px)"
-            data-srcset="{{ $i_1.RelPermalink }} 1x" >
-
-        <source
-            media="(min-width: 768px)"
             data-srcset="{{ $i_2.RelPermalink }} 1x" >
 
         <source

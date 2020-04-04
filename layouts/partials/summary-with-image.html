@@ -1,13 +1,51 @@
-{{ $featured_image := .Page.Resources.GetMatch "featured_image" }}
+{{ $img := .Page.Resources.GetMatch "featured_image" }}
 
-<div class="dib ma2">
+{{ $i_0 := "450x600 jpg" }}
+{{ $i_2 := "744x992 jpg" }}
+{{ $i_3 := "900x1200 jpg" }}
+{{ $i_4 := "1080x1920 jpg" }}
+
+{{ if isset .Params "portrait" }}
+  {{ $i_0 = $img.Fit "450x600 jpg" }}
+  {{ $i_2 = $img.Fit "744x992 jpg" }}
+  {{ $i_3 = $img.Fit "900x1200 jpg" }}
+  {{ $i_4 = $img.Fit "1080x1920 jpg" }}
+{{ else }}
+  {{ $i_0 = $img.Fit "600x450 jpg" }}
+  {{ $i_2 = $img.Fit "992x744 jpg" }}
+  {{ $i_3 = $img.Fit "1200x900 jpg" }}
+  {{ $i_4 = $img.Fit "1920x1080 jpg" }}
+{{ end }}
+
+<figure class="dib ma2">
     <a href="{{.Permalink}}">
-        <picture class="db w-100 relative hover-container">
+        <picture class="lazy db w-100 relative hover-container">
+            <source
+                media="(max-width: 600px)"
+                data-srcset="{{ $i_0.RelPermalink }} 1x" >
+
+            <source
+                media="(min-width: 600px)"
+                data-srcset="{{ $i_2.RelPermalink }} 1x" >
+
+            <source
+                media="(min-width: 992px)"
+                data-srcset="{{ $i_3.RelPermalink }} 1x" >
+
+            <source
+                media="(min-width: 1200px)"
+                data-srcset="{{ $i_4.RelPermalink }} 1x" >
+
+            <source
+                media="(min-width: 1921px)"
+                data-srcset="{{ $img.RelPermalink }} 1x" >
+
             <img
-                src="{{ $featured_image.RelPermalink }}" 
+                src="{{ $i_2.RelPermalink }}" 
                 alt="image from {{ .Title }}">
             <div class="overlay"></div>
             <div class="overlay-text"> {{ .Title }} </div>
         </picture>
     </a>
-</div>
+    <figcaption class="dn-ns">{{ .Title }}</figcaption>
+</figure>
