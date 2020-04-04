@@ -1,7 +1,6 @@
 ---
 title: "About"
 date: 2020-03-30T09:20:06+01:00
-menu: main
 draft: false
 resources:
 - name: photo
