@@ -5,7 +5,7 @@
     <div class="flex-l flex-wrap-l">
         <div class="flex-l">
             {{ with .context.Site.GetPage "section" .sectionName }}
-            <div class="flex-l relative self-end w-50">
+            <div class="flex-l relative self-end w-50-l">
                 <h1 class="dib self-center f1-ns f2 pl2">{{ .Title }}</h1>
                 <a href="#navigation" style="top: 40%" class="dib self-center absolute right-0 link f4 f3-ns pl2 pl5-l">⬆️ </a>
             </div>
@@ -17,10 +17,16 @@
         </div>
 
         <div class="flex-l">
-            <div class="flex-l flex-column-l w-50-l">
-                {{ range first 2 (after 1 $sortedSections) }}
+            <div class="flex-l flex-column-l w-50-l items-end">
+                {{ with index $sortedSections 1 }}
                 {{ partial "summary-with-image.html" . }}
                 {{ end }}
+
+                <div class="w-80-l">
+                {{ with index $sortedSections 2 }}
+                {{ partial "summary-with-image.html" . }}
+                {{ end }}
+                </div>
             </div>
 
             <div class="flex-l flex-column-l w-50-l">
