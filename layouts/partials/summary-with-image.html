@@ -1,48 +1,35 @@
-{{ $img := or (.Page.Resources.GetMatch "link_image") (.Page.Resources.GetMatch "link_image_mobile") (.Page.Resources.GetMatch "banner")   }}
+{{ $desktop_img := or (.Page.Resources.GetMatch "link_image") (.Page.Resources.GetMatch "banner") }}
+{{ $mobile_img := or (.Page.Resources.GetMatch "link_image_mobile") (.Page.Resources.GetMatch "banner")   }}
 
-{{ if $img }}
+{{ $desktop_img_0 := $desktop_img.Fit "1200x900 jpg" }}
+{{ $desktop_img_1 := $desktop_img.Fit "1920x1080 jpg" }}
+{{ $desktop_img_2 := $desktop_img.Fit "2400x1800 jpg" }}
 
-{{ $i_1 := "450x600 jpg" }}
-{{ $i_2 := "744x992 jpg" }}
-{{ $i_3 := "900x1200 jpg" }}
-{{ $i_4 := "1080x1920 jpg" }}
-{{ $i_5 := "1800x2400 jpg" }}
-
-{{ if isset .Params "portrait" }}
-  {{ $i_1 = $img.Fit "450x600 jpg" }}
-  {{ $i_2 = $img.Fit "744x992 jpg" }}
-  {{ $i_3 = $img.Fit "900x1200 jpg" }}
-  {{ $i_4 = $img.Fit "1080x1920 jpg" }}
-  {{ $i_5 = $img.Fit "1800x2400 jpg" }}
-{{ else }}
-  {{ $i_1 = $img.Fit "600x450 jpg" }}
-  {{ $i_2 = $img.Fit "992x744 jpg" }}
-  {{ $i_3 = $img.Fit "1200x900 jpg" }}
-  {{ $i_4 = $img.Fit "1920x1080 jpg" }}
-  {{ $i_5 = $img.Fit "2400x1800 jpg" }}
-{{ end }}
+{{ $mobile_img_0 := $mobile_img.Fit "600x450 jpg" }}
+{{ $mobile_img_1 := $mobile_img.Fit "1200x900 jpg" }}
+{{ $mobile_img_2 := $mobile_img.Fit "2400x1800 jpg" }}
 
 <figure class="dib ma2">
     <a href="{{.Permalink}}">
-        <picture class="lazy db w-100 relative hover-container">
+        <picture class="lazy dib relative hover-container">
             <source
-                media="(max-width: 600px)"
-                data-srcset="{{ $i_1.RelPermalink }} 1x, {{ $i_3.RelPermalink }} 2x" >
+                media="(max-width: 30em)"
+                data-srcset="{{ $mobile_img_0.RelPermalink }} 1x, {{ $mobile_img_1.RelPermalink }} 2x" >
 
             <source
-                media="(min-width: 600px)"
-                data-srcset="{{ $i_2.RelPermalink }} 1x, {{ $i_4.RelPermalink }} 2x" >
+                media="(min-width: 30em) and (max-width: 60em)"
+                data-srcset="{{ $mobile_img_1.RelPermalink }} 1x, {{ $mobile_img_2.RelPermalink }} 2x" >
 
             <source
-                media="(min-width: 1200px)"
-                data-srcset="{{ $i_4.RelPermalink }} 1x, {{ $i_5.RelPermalink }} 2x" >
+                media="(min-width: 60em)"
+                data-srcset="{{ $desktop_img_0.RelPermalink }} 1x, {{ $desktop_img_2.RelPermalink }} 2x" >
 
             <source
                 media="(min-width: 1920px)"
-                data-srcset="{{ $i_5.RelPermalink }} 1x, {{ $img.RelPermalink }} 2x" >
+                data-srcset="{{ $desktop_img_1.RelPermalink }} 1x, {{ $desktop_img.RelPermalink }} 2x" >
 
             <img
-                src="{{ $i_2.RelPermalink }}" 
+                src="{{ $desktop_img_0.RelPermalink }}" 
                 alt="image from {{ .Title }}">
             <div class="overlay o-0 bg-light-blue absolute top-0 bottom-0 left-0 right-0 w-100 h-100"></div>
             <div class="overlay-text o-0 lh-solid absolute f2"> {{ .Title }} </div>
@@ -50,4 +37,3 @@
     </a>
     <figcaption class="dn-l f4">{{ .Title }}</figcaption>
 </figure>
-{{ end }}
