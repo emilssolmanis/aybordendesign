@@ -5,7 +5,7 @@ draft: false
 summary: an epic tale of henry and his mates going out for a pissup
 order: 2
 resources:
-- name: featured_image
+- name: banner
   src: images/banner.jpg
 - name: pic001
   src: images/001.jpg

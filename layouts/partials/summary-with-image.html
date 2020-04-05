@@ -1,4 +1,6 @@
-{{ $img := .Page.Resources.GetMatch "featured_image" }}
+{{ $img := or (.Page.Resources.GetMatch "link_image") (.Page.Resources.GetMatch "link_image_mobile") (.Page.Resources.GetMatch "banner")   }}
+
+{{ if $img }}
 
 {{ $i_1 := "450x600 jpg" }}
 {{ $i_2 := "744x992 jpg" }}
@@ -48,3 +50,4 @@
     </a>
     <figcaption class="dn-l f4">{{ .Title }}</figcaption>
 </figure>
+{{ end }}

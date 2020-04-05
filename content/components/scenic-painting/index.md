@@ -5,7 +5,7 @@ draft: false
 summary: stuff I painted
 order: 1
 resources:
-- name: featured_image
+- name: banner
   src: images/banner.jpg
 - name: pic001
   src: images/001.jpg

@@ -5,7 +5,7 @@ draft: false
 summary: it's obviously a house made of cider
 order: 4
 resources:
-- name: featured_image
+- name: banner
   src: images/banner.jpg
 - name: pic001
   src: images/001.jpg
