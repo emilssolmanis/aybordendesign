@@ -1,7 +1,7 @@
 ---
 title: "Project 6"
 date: 2020-04-05T18:31:21+01:00
-draft: true
+draft: false
 order: 6
 resources:
 - name: banner
