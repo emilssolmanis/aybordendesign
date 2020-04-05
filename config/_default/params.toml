@@ -1,4 +1,4 @@
-custom_css = ["css/fonts.css", "css/image-hovers.css"]
+custom_css = ["css/fonts.css", "css/image-hovers.css", "css/global.css"]
 favicon = "images/new-logo-16.png"
 body_classes = "amatic bg-near-white"
 post_content_classes = "amatic"
