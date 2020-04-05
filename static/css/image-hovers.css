@@ -1,10 +1,15 @@
 .overlay, .overlay-text {
-    opacity: 0;
     transition: .5s ease;
 }
 
 .hover-container {
+    /* tachyons 'light-blue', but with alpha */
+    border: .25rem solid rgba(150, 204, 255, 0.7);
     line-height: 0;
+}
+
+.hover-container:hover {
+    border: .25rem solid rgba(150, 204, 255, 1);
 }
 
 .hover-container:hover .overlay {
