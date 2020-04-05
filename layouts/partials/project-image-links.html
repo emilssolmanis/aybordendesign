@@ -1,0 +1,31 @@
+{{ $section := where .context.Site.RegularPages "Section" .sectionName }}
+{{ $sortedSections := sort $section ".Params.order" }} 
+
+<div id="{{ .sectionName }}" class="pa3 pa4-ns w-100 w-70-l center">
+    <div class="flex-l">
+        <div class="flex-l flex-column-l items-center w-100 w-50-l">
+            {{ with .context.Site.GetPage "section" .sectionName }}
+            <div class="relative w-100">
+                <h1 class="di w-25 tl self-start f1-ns f2 pl2">{{ .Title }}</h1>
+                <a href="#navigation" style="top: 40%" class="di tr absolute right-0 h-100 w-two-thirds link f4 f3-ns">⬆️ </a>
+            </div>
+            {{ end }}
+
+            {{ range first 1 $sortedSections }}
+                {{ partial "summary-with-image.html" . }}
+            {{ end }}
+        </div>
+
+        <div class="flex-l flex-column-l items-center w-100 w-50-l">
+            {{ range first 3 (after 1 $sortedSections) }}
+                {{ partial "summary-with-image.html" . }}
+            {{ end }}
+        </div>
+
+        <div class="flex-l flex-column-l items-center self-center w-100 w-50-l">
+            {{ range after 4 $sortedSections }}
+                {{ partial "summary-with-image.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>

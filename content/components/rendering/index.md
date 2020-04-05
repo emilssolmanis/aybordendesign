@@ -3,10 +3,12 @@ title: "Rendering"
 date: 2020-03-31T16:21:12+01:00
 draft: false
 summary: renderenderenderender
-order: 2
+order: 4
 resources:
-- name: featured_image
+- name: banner
   src: images/banner.jpg
+- name: link_image
+  src: images/link.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002
