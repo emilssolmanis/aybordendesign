@@ -7,6 +7,8 @@ order: 2
 resources:
 - name: banner
   src: images/banner.jpg
+- name: link_image
+  src: images/link.jpg
 - name: pic001
   src: images/001.jpg
 - name: pic002
