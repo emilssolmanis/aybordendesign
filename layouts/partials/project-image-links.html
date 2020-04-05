@@ -3,7 +3,7 @@
 
 <div id="{{ .sectionName }}" class="pa3 pa4-ns w-100 w-70-l center">
     <div class="flex-l">
-        <div class="flex-l flex-column-l items-center w-100 w-50-l">
+        <div class="flex-l flex-column-l self-center items-end w-100 w-third-l">
             {{ with .context.Site.GetPage "section" .sectionName }}
             <div class="relative w-100">
                 <h1 class="di w-25 tl self-start f1-ns f2 pl2">{{ .Title }}</h1>
@@ -16,13 +16,13 @@
             {{ end }}
         </div>
 
-        <div class="flex-l flex-column-l items-center w-100 w-50-l">
+        <div class="flex-l flex-column-l items-center w-100 w-third-l">
             {{ range first 3 (after 1 $sortedSections) }}
                 {{ partial "summary-with-image.html" . }}
             {{ end }}
         </div>
 
-        <div class="flex-l flex-column-l items-center self-center w-100 w-50-l">
+        <div class="flex-l flex-column-l items-start self-center w-100 w-third-l">
             {{ range after 4 $sortedSections }}
                 {{ partial "summary-with-image.html" . }}
             {{ end }}
