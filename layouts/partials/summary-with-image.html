@@ -1,20 +1,23 @@
 {{ $img := .Page.Resources.GetMatch "featured_image" }}
 
-{{ $i_0 := "450x600 jpg" }}
+{{ $i_1 := "450x600 jpg" }}
 {{ $i_2 := "744x992 jpg" }}
 {{ $i_3 := "900x1200 jpg" }}
 {{ $i_4 := "1080x1920 jpg" }}
+{{ $i_5 := "1800x2400 jpg" }}
 
 {{ if isset .Params "portrait" }}
-  {{ $i_0 = $img.Fit "450x600 jpg" }}
+  {{ $i_1 = $img.Fit "450x600 jpg" }}
   {{ $i_2 = $img.Fit "744x992 jpg" }}
   {{ $i_3 = $img.Fit "900x1200 jpg" }}
   {{ $i_4 = $img.Fit "1080x1920 jpg" }}
+  {{ $i_5 = $img.Fit "1800x2400 jpg" }}
 {{ else }}
-  {{ $i_0 = $img.Fit "600x450 jpg" }}
+  {{ $i_1 = $img.Fit "600x450 jpg" }}
   {{ $i_2 = $img.Fit "992x744 jpg" }}
   {{ $i_3 = $img.Fit "1200x900 jpg" }}
   {{ $i_4 = $img.Fit "1920x1080 jpg" }}
+  {{ $i_5 = $img.Fit "2400x1800 jpg" }}
 {{ end }}
 
 <figure class="dib ma2">
@@ -22,23 +25,19 @@
         <picture class="lazy db w-100 relative hover-container">
             <source
                 media="(max-width: 600px)"
-                data-srcset="{{ $i_0.RelPermalink }} 1x, {{ $i_3.RelPermalink }} 2x" >
+                data-srcset="{{ $i_1.RelPermalink }} 1x, {{ $i_3.RelPermalink }} 2x" >
 
             <source
                 media="(min-width: 600px)"
                 data-srcset="{{ $i_2.RelPermalink }} 1x, {{ $i_4.RelPermalink }} 2x" >
 
             <source
-                media="(min-width: 992px)"
-                data-srcset="{{ $i_3.RelPermalink }} 1x, {{ $img.RelPermalink }} 2x" >
-
-            <source
                 media="(min-width: 1200px)"
-                data-srcset="{{ $i_4.RelPermalink }} 1x" >
+                data-srcset="{{ $i_4.RelPermalink }} 1x, {{ $i_5.RelPermalink }} 2x" >
 
             <source
-                media="(min-width: 1921px)"
-                data-srcset="{{ $img.RelPermalink }} 1x" >
+                media="(min-width: 1920px)"
+                data-srcset="{{ $i_5.RelPermalink }} 1x, {{ $img.RelPermalink }} 2x" >
 
             <img
                 src="{{ $i_2.RelPermalink }}" 
