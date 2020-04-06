@@ -1,7 +1,19 @@
 {{ $img := $.Page.Resources.GetMatch (.Get 0) }}
-{{ $img := $img.Resize "660x jpg" }}
 
-<figure>
-    <img src="{{ $img.RelPermalink }}" alt="{{ .Get 1 }}" />
-    <figcaption>{{ .Get 1 }}</figcaption>
+{{ $i_1 := $img.Fit "600x450 jpg" }}
+{{ $i_2 := $img.Fit "1200x900 jpg" }}
+{{ $i_3 := $img.Fit "2400x1800 jpg" }}
+
+<figure class="fl-l w-50-l">
+    <picture class="lazy">
+        <source
+            media="(max-width: 60em)"
+            data-srcset="{{ $i_1.RelPermalink }} 1x, {{ $i_2.RelPermalink }} 2x" >
+
+        <source
+            media="(min-width: 60em)"
+            data-srcset="{{ $i_2.RelPermalink }} 1x, {{ $i_3.RelPermalink }} 2x" >
+
+        <img data-src="{{ $i_1.RelPermalink }}" {{ if isset .Params 1 }} alt="{{ .Get "caption" }}" {{ end }} />
+    </picture>
 </figure>
